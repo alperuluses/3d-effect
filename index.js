@@ -2,9 +2,9 @@
 $('.about-img').mousemove(function (event) {
     $(this).removeClass('transition-effect');
     let mouseX = event.offsetX;
-    let itemW = $(this).width();
-    let degree = (360 * mouseX) / itemW;
-    if (itemW - 30 > mouseX) {
+    let itemWidth = $(this).width();
+    let degree = (360 * mouseX) / itemWidth;
+    if (itemWidth - 30 > mouseX) {
         $(this).css('transform', 'perspective(1000px) rotateY(' + degree / 20 + 'deg)');
         $(this).css('box-shadow', '' + degree / 16 + 'px 0px 20px #fbe989');
     }
