@@ -21,6 +21,6 @@ console.log(mouseX);
 
 }).mouseleave(function () {
     $(this).addClass('transition-effect');
-    $(this).css('box-shadow', '1px 0px 20px #c1c1c1');
+    $(this).css('box-shadow', '1px 0px 20px #c1c1c2');
     $(this).css('transform', 'perspective(0) rotateY(0deg)');
 })
