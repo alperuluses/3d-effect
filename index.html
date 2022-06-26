@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+      }
+      .perspective {
+        perspective: 1200px;
+      }
+      .rotate-container {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition-property: transform;
+        display: block;
+        transform: translate3d(0px, 0px, 0px);
+        transition-duration: 300ms;
+      }
+
+      .rotate-container:hover {
+        transform: translate3d(0px, 0px, 100px);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition-property: transform;
+        display: block;
+        position: relative;
+      }
+
+      @keyframes scale {
+        from {
+          transform: translate3d(0px, 0px, 50px);
+        }
+        to {
+          transform: translate3d(0px, 0px, 50px);
+        }
+      }
+    </style>
+    <div class="perspective">
+      <div class="rotate-container">
+        <img
+          src="https://www.fillmurray.com/640/360"
+          id="img"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
